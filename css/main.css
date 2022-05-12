@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #271f30;
+  color: #f7f7ff;
+}
+
+nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #C11785;
+}
+nav .banner {
+  display: flex;
+}
+nav h1 {
+  font-family: "Ubuntu", sans-serif;
+}
+nav h1, nav h3 {
+  margin: 15px;
+  color: #f7f7ff;
+}
+
+.btn-container button {
+  margin: 15px;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #271f30;
+  color: #C11785;
+  font-weight: bold;
+  border: none;
+}
+.btn-container button:hover {
+  cursor: pointer;
+  background-color: #583381;
+  color: #f020a7;
+}
+.btn-container button:active {
+  background-color: #271f30;
+  color: #C11785;
+}
+
+.loading-container {
+  width: 70px;
+  margin: 10px auto;
+}
+.loading-container img {
+  width: 70px;
+}
+
+/*# sourceMappingURL=main.css.map */

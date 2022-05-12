@@ -1,0 +1,17 @@
+nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $secondary-color;
+    .banner {
+        display: flex;
+    }
+    h1 {
+        font-family: 'Ubuntu', sans-serif;
+    }
+    h1, h3 {
+        margin: 15px;
+        color: $font-color;
+    }
+}
