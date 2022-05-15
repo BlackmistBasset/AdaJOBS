@@ -7,7 +7,7 @@
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
-    <script src="./script/script.js"></script>
+   
 
     <nav>
         <div class="banner">
@@ -19,9 +19,85 @@
         </div>
     </nav>
 
+    
+    <form>
+        <select name="Location">
+            <option value="Location">Location...</option>
+            <option value="CABA">CABA</option>
+            <option value="GBA Norte">GBA Norte</option>
+            <option value="GBA Oeste">GBA Oeste</option>
+            <option value="GBA Sur">GBA Sur</option>
+        </select>
+        
+        <select name="Seniority">
+            <option value="Seniority">Seniority...</option>
+            <option value="Trainee">Trainee</option>
+            <option value="Junior">Junior</option>
+            <option value="Semi-Senior">Semi-Senior</option>
+            <option value="Senior">Senior</option>
+        </select>
+        
+        <select name="Category">
+            <option value="Category">Category...</option>
+            <option value="Horse Care">Horse Care</option>
+            <option value="Horse Competition">Horse Competition</option>
+            <option value="Horse Training">Horse Training</option>
+            <option value="Horse Breeding">Horse Breeding</option>
+        </select>
+        
+        <input type="submit" value="Search" /> 
+        <input type="button" value="Clear" />
+    </form>
+    
     <div class="loading-container">
         <img src="./assets/running-horse-gif.gif">
     </div>
-    
-    </body>
+
+    <section>
+        <div class="card">
+            <h2>Horse Trainer</h2>
+            <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat similique soluta, aut expedita quia debitis illum blanditiis distinctio cum consequatur magnam fuga quidem? Iure, quos facere! Molestias commodi ea similique!</p>
+            </div>
+            <h3>
+                <span>CABA</span>
+                <span>Senior</span>
+                <span>Horse Training</span>
+            </h3>
+            <button>See Details</button>
+        </div>
+
+        <div class="card">
+            <h2>Horse Breeding Vet</h2>
+            <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat similique soluta, aut expedita quia debitis illum blanditiis distinctio cum consequatur magnam fuga quidem? Iure, quos facere! Molestias commodi ea similique!</p>
+            </div>
+            <h3>
+                <span>GBA Sur</span>
+                <span>Senior</span>
+                <span>Horse Breeding</span>
+            </h3>
+            <button>See Details</button>
+        </div>
+
+        <div class="card">
+            <h2>Horse Caretaker</h2>
+            <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat similique soluta, aut expedita quia debitis illum blanditiis distinctio cum consequatur magnam fuga quidem? Iure, quos facere! Molestias commodi ea similique!</p>
+            </div>
+            <h3>
+                <span>GBA Oeste</span>
+                <span>Trainee</span>
+                <span>Horse Caring</span>
+            </h3>
+            <button>See Details</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© BlackmistBasset 2022</p>
+    </footer>
+    <script src="./script/script.js"></script>
+</body>
 </html>

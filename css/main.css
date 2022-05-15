@@ -8,8 +8,10 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #271f30;
-  color: #f7f7ff;
+  justify-content: space-between;
 }
 
 nav {
@@ -28,6 +30,20 @@ nav h1 {
 nav h1, nav h3 {
   margin: 15px;
   color: #f7f7ff;
+}
+
+section {
+  padding: 15px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+footer p {
+  color: #C11785;
+  text-align: center;
+  font-size: 0.8em;
 }
 
 .btn-container button {
@@ -56,6 +72,139 @@ nav h1, nav h3 {
 }
 .loading-container img {
   width: 70px;
+}
+
+form {
+  margin: 10px auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form select {
+  width: 20%;
+  height: 30px;
+  margin: 15px 10px;
+  color: #f7f7ff;
+  background-color: #271f30;
+  border-radius: 8px;
+  border: 2px solid #C11785;
+}
+form input[type=submit] {
+  margin: 5px;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #C11785;
+  color: #271f30;
+  font-weight: bold;
+  border: none;
+  width: 80px;
+}
+form input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #f020a7;
+  color: #583381;
+}
+form input[type=submit]:active {
+  background-color: #C11785;
+  color: #271f30;
+}
+form input[type=button] {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #271f30;
+  color: #C11785;
+  font-weight: bold;
+  border: none;
+  border: 2px solid #C11785;
+  margin: 5px;
+  width: 80px;
+}
+form input[type=button]:hover {
+  cursor: pointer;
+  background-color: #583381;
+  color: #f020a7;
+}
+form input[type=button]:active {
+  background-color: #271f30;
+  color: #C11785;
+}
+
+.card {
+  margin: 15px;
+  padding: 10px;
+  padding-right: 20px;
+  width: 320px;
+  height: 235px;
+  border-radius: 10px;
+  border: 2px solid #C11785;
+  color: #f7f7ff;
+}
+.card h2 {
+  font-size: 1.2em;
+  margin: 5px 10px;
+  color: #C11785;
+}
+.card div {
+  height: 90px;
+  overflow-y: auto;
+  margin-bottom: 14px;
+}
+.card p {
+  font-size: 0.8em;
+  margin: 5px 10px;
+}
+.card h3 {
+  font-size: 0.8em;
+  margin-top: 17px;
+  margin-left: 5px;
+}
+.card span {
+  padding: 0px 10px;
+  background-color: #271f30;
+  color: #C11785;
+  margin: 3px;
+  border: 2px solid #C11785;
+  border-radius: 6px;
+}
+.card button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #C11785;
+  color: #271f30;
+  font-weight: bold;
+  border: none;
+  margin-top: 15px;
+  margin-left: 185px;
+}
+.card button:hover {
+  cursor: pointer;
+  background-color: #f020a7;
+  color: #583381;
+}
+.card button:active {
+  background-color: #C11785;
+  color: #271f30;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #271f30;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C11785;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f020a7;
 }
 
 /*# sourceMappingURL=main.css.map */

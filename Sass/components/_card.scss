@@ -1,0 +1,43 @@
+.card {
+    margin: 15px;
+    padding: 10px;
+    padding-right: 20px;
+    width: 320px;
+    height: 235px;
+    border-radius: 10px;
+    border: 2px solid $secondary-color;
+    color: $font-color;
+
+    h2 {
+        font-size: 1.2em;
+        margin: 5px 10px;
+        color: $secondary-color;
+    }
+    div {
+        height: 90px;
+        overflow-y: auto;
+        margin-bottom: 14px;
+    }
+    p {
+        font-size: 0.8em;
+        margin: 5px 10px;
+    }
+    h3 {
+      font-size: 0.8em;  
+      margin-top: 17px;
+      margin-left: 5px;
+    }
+    span {
+        padding: 0px 10px;
+        background-color: $main-color;
+        color: $secondary-color;
+        margin: 3px;
+        border: 2px solid $secondary-color;
+        border-radius: 6px;
+    }
+    button {
+        @include button-format ($secondary-color, $main-color, $secondary-color-lighter, $main-color-lighter);
+        margin-top: 15px;
+        margin-left: 185px;
+    }
+}
