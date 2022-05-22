@@ -32,24 +32,20 @@ nav h1, nav h3 {
   color: #f7f7ff;
 }
 
-section {
-  width: 80%;
-  margin: 0px auto;
-}
-section .card-container {
-  width: 1050px;
+.card-container {
+  padding: 15px 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: 0px auto;
+  justify-content: center;
+  height: 500px;
+  overflow-y: auto;
 }
 
 footer {
-  position: relative;
+  position: absolute;
   top: 96%;
   left: 0%;
   width: 100%;
-  margin-bottom: 20px;
 }
 footer p {
   color: #C11785;
@@ -93,7 +89,7 @@ form {
   align-items: center;
 }
 form select {
-  width: 25%;
+  width: 20%;
   height: 30px;
   margin: 15px 10px;
   color: #f7f7ff;
@@ -216,81 +212,6 @@ form input[type=button]:active {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #f020a7;
-}
-
-.card-detail {
-  padding: 10px;
-  margin: 0px auto;
-  width: 80%;
-  border: 2px solid #C11785;
-  color: #f7f7ff;
-  border-radius: 10px;
-}
-.card-detail h2 {
-  color: #C11785;
-  margin-bottom: 15px;
-}
-.card-detail p {
-  margin-left: 10px;
-  margin-bottom: 15px;
-}
-.card-detail div {
-  margin: 10px;
-}
-.card-detail div h3 {
-  display: inline-block;
-}
-.card-detail div span {
-  padding: 0px 10px;
-  color: #C11785;
-  margin: 3px;
-  border: 2px solid #C11785;
-  border-radius: 6px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: flex-end;
-}
-.button-container .btn-eliminar {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
-  background-color: #271f30;
-  color: #C11785;
-  font-weight: bold;
-  border: none;
-  border: 2px solid #C11785;
-  margin-left: 10px;
-}
-.button-container .btn-eliminar:hover {
-  cursor: pointer;
-  background-color: #583381;
-  color: #f020a7;
-}
-.button-container .btn-eliminar:active {
-  background-color: #271f30;
-  color: #C11785;
-}
-.button-container .btn-editar {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
-  background-color: #C11785;
-  color: #271f30;
-  font-weight: bold;
-  border: none;
-}
-.button-container .btn-editar:hover {
-  cursor: pointer;
-  background-color: #f020a7;
-  color: #583381;
-}
-.button-container .btn-editar:active {
-  background-color: #C11785;
-  color: #271f30;
 }
 
 /*# sourceMappingURL=main.css.map */

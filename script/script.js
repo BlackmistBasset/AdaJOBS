@@ -1,29 +1,53 @@
 // URL: 'https://6277e34508221c96846a7195.mockapi.io/jobs'
+const card = document.querySelector('.card')
+const cardContainer = document.querySelector('.card-container')
 
-const sample =  {
-    "name": "Horse Caretaker",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus turpis in eu mi bibendum neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus turpis in eu mi bibendum neque.",
-    "location": "CABA",
-    "category": "Horse care",
-    "seniority": "Junior",
-    "horses": [
-     {
-      "names": [
-       "horse-name1",
-       "horse-name2"
-      ],
-      "img": "./assets/horse-sample.png",
-      "description": "horses-details"
-     }
-    ],
-    "id": "1"
-   }
+const getHorseJobs = () => {
+    fetch('https://6277e34508221c96846a7195.mockapi.io/jobs')
+        .then(res => res.json())
+        .then(data => createJobCards(data))
+        .catch(err => console.log(err))
+}
 
-   const card = document.querySelector('.card')
+getHorseJobs()
 
-//    card.innerHTML = `<h2>${sample.name}</h2>
-//                      <div>
-//                      <p>${sample.description}</p>
-//                      </div>
-//                      <h3><span>${sample.location}</span><span>${sample.category}</span><span>${sample.seniority}</span></h3>
-//                      <button>See Details</button>`
+const createJobCards = (jobs) => {
+    jobs.forEach(job => {
+        const { name, id, description, location, category, seniority } = job
+            cardContainer.innerHTML += `
+                            <div class="card">
+                            <h2>${name}</h2>
+                                <div>
+                                    <p>${description}</p>
+                                </div>
+                            <h3><span>${location}</span><span>${category}</span><span>${seniority}</span></h3>
+                            <button onClick="seeJobDetails(${id})">See Details</button>
+                            </div>
+                        `
+    })
+}
+
+const seeJobDetails = (jobId) => {
+    fetch(`https://6277e34508221c96846a7195.mockapi.io/jobs/${jobId}`)
+        .then(res => res.json())
+        .then(data => createCardDetail(data))
+    }
+    
+    const createCardDetail = (cardDetail) => {
+        const { name, location, category, seniority, description } = cardDetail
+    cardContainer.innerHTML = `
+                                <div class="card-detail">
+                                    <h2>${name}</h2>
+                                    <p>${description}</p>
+                                    <div>
+                                        <h3>Tags: </h3> 
+                                        <span>${location}</span> 
+                                        <span>${category}</span> 
+                                        <span>${seniority}</span>
+                                    </div>
+                                    <div class="button-container">
+                                        <button class="btn-editar">Editar</button>
+                                        <button class="btn-eliminar">Eliminar</button>
+                                    </div>
+                                </div>`
+    }

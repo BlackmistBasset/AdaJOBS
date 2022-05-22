@@ -1,7 +1,11 @@
 section {
-    padding: 15px 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 150px;
+    width: 80%;
+    margin: 0px auto;
+    .card-container {
+        width: 1050px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 0px auto;
+    }
 }
