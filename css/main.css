@@ -33,11 +33,11 @@ nav h1, nav h3 {
 }
 
 section {
-  width: 80%;
-  margin: 0px auto;
+  width: 85%;
+  margin: 0px auto 50px auto;
 }
 section .card-container {
-  width: 1050px;
+  width: 1100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -147,7 +147,7 @@ form input[type=button]:active {
   margin: 15px;
   padding: 10px;
   padding-right: 20px;
-  width: 320px;
+  width: 330px;
   height: 235px;
   border-radius: 10px;
   border: 2px solid #C11785;
@@ -219,42 +219,82 @@ form input[type=button]:active {
 }
 
 .card-detail {
-  padding: 10px;
+  padding: 20px;
   margin: 0px auto;
   width: 80%;
   border: 2px solid #C11785;
   color: #f7f7ff;
   border-radius: 10px;
 }
+.card-detail .return {
+  text-decoration: underline;
+  color: #C11785;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-left: 0px;
+  margin-top: 5px;
+}
 .card-detail h2 {
   color: #C11785;
   margin-bottom: 15px;
 }
-.card-detail p {
-  margin-left: 10px;
-  margin-bottom: 15px;
-}
-.card-detail div {
-  margin: 10px;
-}
-.card-detail div h3 {
+.card-detail .tags-container h3 {
   display: inline-block;
 }
-.card-detail div span {
+.card-detail .tags-container span {
   padding: 0px 10px;
   color: #C11785;
   margin: 3px;
   border: 2px solid #C11785;
   border-radius: 6px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
+}
+
+.job-horse-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.horse-details {
+  width: 35%;
+}
+.horse-details img {
+  width: 220px;
+  border-radius: 10px;
+  border: 2px solid #C11785;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.horse-details h4 {
+  color: #C11785;
+}
+.horse-details h4 > p {
+  font-weight: lighter;
+}
+
+.job-details {
+  width: 55%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.job-details h4 {
+  color: #C11785;
+}
+
+.job-description {
+  margin-bottom: 90px;
 }
 
 .button-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  margin-top: 30px;
 }
-.button-container .btn-eliminar {
+.button-container .btn-delete {
   width: 100px;
   height: 30px;
   border-radius: 10px;
@@ -263,18 +303,18 @@ form input[type=button]:active {
   font-weight: bold;
   border: none;
   border: 2px solid #C11785;
-  margin-left: 10px;
+  margin-left: 20px;
 }
-.button-container .btn-eliminar:hover {
+.button-container .btn-delete:hover {
   cursor: pointer;
   background-color: #583381;
   color: #f020a7;
 }
-.button-container .btn-eliminar:active {
+.button-container .btn-delete:active {
   background-color: #271f30;
   color: #C11785;
 }
-.button-container .btn-editar {
+.button-container .btn-edit {
   width: 100px;
   height: 30px;
   border-radius: 10px;
@@ -283,12 +323,12 @@ form input[type=button]:active {
   font-weight: bold;
   border: none;
 }
-.button-container .btn-editar:hover {
+.button-container .btn-edit:hover {
   cursor: pointer;
   background-color: #f020a7;
   color: #583381;
 }
-.button-container .btn-editar:active {
+.button-container .btn-edit:active {
   background-color: #C11785;
   color: #271f30;
 }

@@ -3,6 +3,7 @@ const card = document.querySelector('.card')
 const cardContainer = document.querySelector('.card-container')
 
 const getHorseJobs = () => {
+    cardContainer.innerHTML = ''
     fetch('https://6277e34508221c96846a7195.mockapi.io/jobs')
         .then(res => res.json())
         .then(data => createJobCards(data))
@@ -34,20 +35,37 @@ const seeJobDetails = (jobId) => {
     }
     
     const createCardDetail = (cardDetail) => {
-        const { name, location, category, seniority, description } = cardDetail
+        const { name, location, category, seniority, description, horse } = cardDetail
+        const { horseName, horseImg, horseDetail } = horse
     cardContainer.innerHTML = `
-                                <div class="card-detail">
-                                    <h2>${name}</h2>
-                                    <p>${description}</p>
-                                    <div>
-                                        <h3>Tags: </h3> 
-                                        <span>${location}</span> 
-                                        <span>${category}</span> 
-                                        <span>${seniority}</span>
+                            <div class="card-detail">
+
+                            <p class="return" onClick="getHorseJobs()">Go back</p> 
+                            <div class="job-horse-container">
+                            <div class="job-details">
+                                        <h2>${name}</h2>
+                                        <div class="job-description">
+                                            <h4>Job Description:</h4>
+                                            <p>${description}</p>
+                                        </div>
+                                        <div class="tags-container">
+                                            <h3>Tags: </h3> 
+                                            <span>${location}</span> 
+                                            <span>${category}</span> 
+                                            <span>${seniority}</span>
+                                        </div>
                                     </div>
-                                    <div class="button-container">
-                                        <button class="btn-editar">Editar</button>
-                                        <button class="btn-eliminar">Eliminar</button>
+
+                                    <div class="horse-details">
+                                        <img src="${horseImg}" alt="${horseName}"/>
+                                        <h4>Horse Name: </h4> <p>${horseName} </p>
+                                        <h4>Horse Aditional Details:</h4> <p>${horseDetail}</p>
                                     </div>
-                                </div>`
+                                </div>
+
+                                <div class="button-container">
+                                    <button class="btn-edit">Edit</button>
+                                    <button class="btn-delete">Delete</button>
+                                </div>
+                            </div>`
     }
