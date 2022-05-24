@@ -7,7 +7,7 @@
         <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
-    <script src="./script/script.js"></script>
+   
 
     <nav>
         <div class="banner">
@@ -19,9 +19,50 @@
         </div>
     </nav>
 
+    
+    <form>
+        <select name="Location">
+            <option value="Location">Location...</option>
+            <option value="CABA">CABA</option>
+            <option value="GBA Norte">GBA Norte</option>
+            <option value="GBA Oeste">GBA Oeste</option>
+            <option value="GBA Sur">GBA Sur</option>
+        </select>
+        
+        <select name="Seniority">
+            <option value="Seniority">Seniority...</option>
+            <option value="Trainee">Trainee</option>
+            <option value="Junior">Junior</option>
+            <option value="Semi-Senior">Semi Senior</option>
+            <option value="Senior">Senior</option>
+        </select>
+        
+        <select name="Category">
+            <option value="Category">Category...</option>
+            <option value="Horse Care">Horse Care</option>
+            <option value="Horse Competition">Competition</option>
+            <option value="Horse Training">Training</option>
+            <option value="Horse Breeding">Breeding</option>
+        </select>
+        
+        <input type="submit" value="Search" /> 
+        <input type="button" value="Clear" />
+    </form>
+    
     <div class="loading-container">
         <img src="./assets/running-horse-gif.gif">
     </div>
-    
-    </body>
+
+    <section>
+        <div class="card-container">
+
+        </div>
+
+    </section>
+
+    <!-- <footer>
+        <p>© BlackmistBasset 2022</p>
+    </footer> -->
+    <script src="./script/script.js"></script>
+</body>
 </html>

@@ -1,0 +1,88 @@
+.card-detail {
+    .return {
+        text-decoration: underline;
+        color: $secondary-color;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+    padding: 20px;
+    margin: 0px auto;
+    width: 80%;
+    border: 2px solid $secondary-color;
+    color: $font-color;
+    border-radius: 10px;
+        h2 {
+            color: $secondary-color;
+            margin-bottom: 15px;
+        }
+
+        .tags-container {
+            h3 {
+                display: inline-block;
+            }
+            span {
+                padding: 0px 10px;
+                color: $secondary-color;
+                margin: 3px;
+                border: 2px solid $secondary-color;
+                border-radius: 6px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+        }
+    }
+}
+
+.job-horse-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.horse-details {
+    width: 35%;
+    img {
+        width: 220px;
+        border-radius: 10px;
+        border: 2px solid $secondary-color;
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+    h4 {
+        color: $secondary-color;
+    }
+    h4 > p {
+        font-weight: lighter;
+    }
+}
+
+.job-details {
+    width: 55%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h4 {
+        color: $secondary-color;
+    }
+    
+}
+
+.job-description {
+    margin-bottom: 90px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .btn-delete {
+        @include button-format($main-color, $secondary-color, $main-color-lighter, $secondary-color-lighter );
+        border: 2px solid $secondary-color;
+        margin-left: 20px;
+    }
+    .btn-edit {
+        @include button-format($secondary-color, $main-color, $secondary-color-lighter, $main-color-lighter );
+    }
+}

@@ -1,0 +1,27 @@
+form {
+    margin: 10px auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    select {
+        width: 25%;
+        height: 30px;
+        margin: 15px 10px;
+        color: $font-color;
+        background-color: $main-color;
+        border-radius: 8px;
+        border: 2px solid $secondary-color;
+    }
+    input[type=submit]  {
+        margin: 5px;
+        @include button-format ($secondary-color, $main-color, $secondary-color-lighter, $main-color-lighter);
+        width: 80px;
+    }
+    input[type=button] {
+        @include button-format ($main-color, $secondary-color, $main-color-lighter, $secondary-color-lighter );
+        border: 2px solid $secondary-color;
+        margin: 5px;
+        width: 80px;
+    }
+}
