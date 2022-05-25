@@ -1,4 +1,4 @@
-.create-job-form {
+.create-job-form, .edit-job-form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -56,5 +56,18 @@
     .btn-success {
         @include button-format ($secondary-color, $main-color, $secondary-color-lighter, $main-color-lighter);
         width: 150px;
+    }
+}
+
+.edit-job-form {
+    width: 80%;
+    margin-top: 20px;
+
+    div {
+        justify-content: center;
+    }
+    
+    .btn-success {
+        width: 100px;
     }
 }

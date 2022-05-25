@@ -333,7 +333,7 @@ form input[type=button]:active {
   color: #271f30;
 }
 
-.create-job-form {
+.create-job-form, .edit-job-form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -341,41 +341,41 @@ form input[type=button]:active {
   border: 2px solid #C11785;
   border-radius: 10px;
 }
-.create-job-form label {
+.create-job-form label, .edit-job-form label {
   color: #C11785;
   margin: 10px;
   margin-left: 20px;
 }
-.create-job-form textarea, .create-job-form input[type=text], .create-job-form select {
+.create-job-form textarea, .create-job-form input[type=text], .create-job-form select, .edit-job-form textarea, .edit-job-form input[type=text], .edit-job-form select {
   width: 85%;
   margin: 0px auto;
 }
-.create-job-form input[type=text] {
+.create-job-form input[type=text], .edit-job-form input[type=text] {
   height: 30px;
   background-color: #271f30;
   color: #f7f7ff;
   border: 2px solid #C11785;
   border-radius: 10px;
 }
-.create-job-form textarea {
+.create-job-form textarea, .edit-job-form textarea {
   background-color: #271f30;
   color: #f7f7ff;
   border: 2px solid #C11785;
   border-radius: 10px;
   height: 100px;
 }
-.create-job-form h4 {
+.create-job-form h4, .edit-job-form h4 {
   font-size: 1.3em;
   color: #C11785;
   margin-top: 30px;
   margin-left: 10px;
 }
-.create-job-form div {
+.create-job-form div, .edit-job-form div {
   width: 40%;
   display: flex;
   margin: 20px auto;
 }
-.create-job-form .btn-cancel {
+.create-job-form .btn-cancel, .edit-job-form .btn-cancel {
   width: 100px;
   height: 30px;
   border-radius: 10px;
@@ -386,16 +386,16 @@ form input[type=button]:active {
   border: 2px solid #C11785;
   margin-right: 10px;
 }
-.create-job-form .btn-cancel:hover {
+.create-job-form .btn-cancel:hover, .edit-job-form .btn-cancel:hover {
   cursor: pointer;
   background-color: #583381;
   color: #f020a7;
 }
-.create-job-form .btn-cancel:active {
+.create-job-form .btn-cancel:active, .edit-job-form .btn-cancel:active {
   background-color: #271f30;
   color: #C11785;
 }
-.create-job-form .btn-success {
+.create-job-form .btn-success, .edit-job-form .btn-success {
   width: 100px;
   height: 30px;
   border-radius: 10px;
@@ -405,14 +405,25 @@ form input[type=button]:active {
   border: none;
   width: 150px;
 }
-.create-job-form .btn-success:hover {
+.create-job-form .btn-success:hover, .edit-job-form .btn-success:hover {
   cursor: pointer;
   background-color: #f020a7;
   color: #583381;
 }
-.create-job-form .btn-success:active {
+.create-job-form .btn-success:active, .edit-job-form .btn-success:active {
   background-color: #C11785;
   color: #271f30;
+}
+
+.edit-job-form {
+  width: 80%;
+  margin-top: 20px;
+}
+.edit-job-form div {
+  justify-content: center;
+}
+.edit-job-form .btn-success {
+  width: 100px;
 }
 
 .delete-container {
