@@ -144,10 +144,10 @@ form input[type=button]:active {
 }
 
 .card {
-  margin: 15px;
+  margin: 13px;
   padding: 10px;
   padding-right: 20px;
-  width: 330px;
+  width: 340px;
   height: 235px;
   border-radius: 10px;
   border: 2px solid #C11785;
@@ -189,7 +189,7 @@ form input[type=button]:active {
   font-weight: bold;
   border: none;
   margin-top: 15px;
-  margin-left: 185px;
+  margin-left: 210px;
 }
 .card button:hover {
   cursor: pointer;
@@ -329,6 +329,88 @@ form input[type=button]:active {
   color: #583381;
 }
 .button-container .btn-edit:active {
+  background-color: #C11785;
+  color: #271f30;
+}
+
+.create-job-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 45%;
+  border: 2px solid #C11785;
+  border-radius: 10px;
+}
+.create-job-form label {
+  color: #C11785;
+  margin: 10px;
+  margin-left: 20px;
+}
+.create-job-form textarea, .create-job-form input[type=text], .create-job-form select {
+  width: 85%;
+  margin: 0px auto;
+}
+.create-job-form input[type=text] {
+  height: 30px;
+  background-color: #271f30;
+  color: #f7f7ff;
+  border: 2px solid #C11785;
+  border-radius: 10px;
+}
+.create-job-form textarea {
+  background-color: #271f30;
+  color: #f7f7ff;
+  border: 2px solid #C11785;
+  border-radius: 10px;
+  height: 100px;
+}
+.create-job-form h4 {
+  font-size: 1.3em;
+  color: #C11785;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.create-job-form div {
+  width: 40%;
+  display: flex;
+  margin: 20px auto;
+}
+.create-job-form button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #271f30;
+  color: #C11785;
+  font-weight: bold;
+  border: none;
+  border: 2px solid #C11785;
+  margin: 5px;
+}
+.create-job-form button:hover {
+  cursor: pointer;
+  background-color: #583381;
+  color: #f020a7;
+}
+.create-job-form button:active {
+  background-color: #271f30;
+  color: #C11785;
+}
+.create-job-form input[type=submit] {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #C11785;
+  color: #271f30;
+  font-weight: bold;
+  border: none;
+  width: 150px;
+}
+.create-job-form input[type=submit]:hover {
+  cursor: pointer;
+  background-color: #f020a7;
+  color: #583381;
+}
+.create-job-form input[type=submit]:active {
   background-color: #C11785;
   color: #271f30;
 }

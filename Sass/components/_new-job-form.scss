@@ -1,0 +1,60 @@
+.create-job-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 45%;
+    border: 2px solid $secondary-color;
+    border-radius: 10px;
+
+    label {
+        color: $secondary-color;
+        margin: 10px;
+        margin-left: 20px;
+    }
+
+    textarea, input[type=text], select {
+        width: 85%;
+        margin: 0px auto;
+
+    }
+
+    input[type=text] {
+        height: 30px;
+        background-color: $main-color;
+        color: $font-color;
+        border: 2px solid $secondary-color;
+        border-radius: 10px;
+    }
+
+    textarea {
+        background-color: $main-color;
+        color: $font-color;
+        border: 2px solid $secondary-color;
+        border-radius: 10px;
+        height: 100px;
+    }
+
+    h4 {
+        font-size: 1.3em;
+        color: $secondary-color;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+    div {
+        width: 40%;
+        display: flex;
+        margin: 20px auto;
+    }
+
+    button {
+        @include button-format ($main-color, $secondary-color, $main-color-lighter, $secondary-color-lighter);
+        border: 2px solid $secondary-color;
+        margin: 5px
+    }
+    
+    input[type=submit] {
+        @include button-format ($secondary-color, $main-color, $secondary-color-lighter, $main-color-lighter);
+        width: 150px;
+    }
+}
