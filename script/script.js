@@ -3,6 +3,8 @@ const card = document.querySelector('.card')
 const cardContainer = document.querySelector('.card-container')
 const enlableSpinner = document.getElementById('render-spinner')
 
+let selectedID = ''
+
 const renderSpinner = () => {
     enlableSpinner.style.display = 'block'
 }
@@ -41,6 +43,7 @@ const seeJobDetails = (jobId) => {
     fetch(`https://6277e34508221c96846a7195.mockapi.io/jobs/${jobId}`)
         .then(res => res.json())
         .then(data => createCardDetail(data))
+    selectedID= jobId
 }
     
 const createCardDetail = (cardDetail) => {
@@ -53,7 +56,8 @@ const createCardDetail = (cardDetail) => {
 
     setTimeout( () => {
         enlableSpinner.style.display = 'none'
-            cardContainer.innerHTML = `
+
+        cardContainer.innerHTML = `
                         <div class="card-detail">
 
                         <p class="return" onClick="getHorseJobs()">Go back</p> 
@@ -80,10 +84,13 @@ const createCardDetail = (cardDetail) => {
                             </div>
 
                             <div class="button-container">
-                            <button class="btn-delete">Delete</button>
+                            <button class="btn-delete" id="delete-job">Delete</button>
                             <button class="btn-edit">Edit</button>
                             </div>
                         </div>`
+
+        const btnDeleteJob = document.getElementById('delete-job')
+        btnDeleteJob.addEventListener('click', warningDelete)
     }, 2000)
 }
 
@@ -133,8 +140,8 @@ const createNewJob = () => {
                 <label>Horse Details: </label>
                     <textarea cols="30" rows="10" id="horse-detail"></textarea>
                 <div>
-                    <button onClick="getHorseJobs()">Cancel</button>
-                    <button id="submit-job">Create job</button> 
+                    <button class="btn-cancel" onClick="getHorseJobs()">Cancel</button>
+                    <button class="btn-success" id="submit-job">Create job</button> 
                 </div>
             </form>
             `
@@ -178,12 +185,48 @@ const submitNewJob = () => {
                 },
                 body: JSON.stringify(saveJobInfo())
             })
-            .then (data => console.log(data))
-            .catch(err => console.log(err))
-            .finally(() => setTimeout(getHorseJobs(), 1000)
+            .then(() => setTimeout(getHorseJobs(), 1000)
             )
         }
         
-      
+        
+// D E L E T E
+        
+const deleteJob = (jobId) => {
+    fetch(`https://6277e34508221c96846a7195.mockapi.io/jobs/${jobId}`, {
+    method: 'DELETE'})
+
+    .then(() => setTimeout(getHorseJobs(), 1000))
+}
+
+const warningModal = document.getElementById('delete-container')
+
+const warningDelete = () => {
+    
+    cardContainer.innerHTML += `
+    <div class="delete-container" id="delete-container">
+    <div class="delete-warning"> 
+    <h3>Warning</h3>
+    <p>Are you sure you want to delete this job offer?</p>
+    <div class="btn-container">
+    <button class="btn-cancel" id="btn-cancel">Cancel</button>
+    <button class="btn-success" id="delete-offer">Delete Offer</button>
+    </div>
+    </div>
+    </div>
+    `
+    
+    const cancelBtn = document.getElementById('btn-cancel')
+    const modalContainer = document.getElementById('delete-container')
+    cancelBtn.addEventListener('click', () => {
+        modalContainer.style.display = 'none'
+        seeJobDetails(selectedID)
+    })
+
+    const deleteOffer = document.getElementById('delete-offer')
+    deleteOffer.addEventListener('click', () => {
+        deleteJob(selectedID) 
+    })
+}
 
 
