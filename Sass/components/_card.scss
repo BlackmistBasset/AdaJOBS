@@ -1,8 +1,8 @@
 .card {
-    margin: 15px;
+    margin: 13px;
     padding: 10px;
     padding-right: 20px;
-    width: 330px;
+    width: 340px;
     height: 235px;
     border-radius: 10px;
     border: 2px solid $secondary-color;
@@ -38,6 +38,6 @@
     button {
         @include button-format ($secondary-color, $main-color, $secondary-color-lighter, $main-color-lighter);
         margin-top: 15px;
-        margin-left: 185px;
+        margin-left: 210px;
     }
 }
