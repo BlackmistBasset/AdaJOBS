@@ -80,7 +80,7 @@
     .btn-delete {
         @include button-format($main-color, $secondary-color, $main-color-lighter, $secondary-color-lighter );
         border: 2px solid $secondary-color;
-        margin-left: 20px;
+        margin-right: 20px;
     }
     .btn-edit {
         @include button-format($secondary-color, $main-color, $secondary-color-lighter, $main-color-lighter );
