@@ -142,6 +142,12 @@ form input[type=button]:active {
   background-color: #271f30;
   color: #C11785;
 }
+form .location-search, form .seniority-search, form .category-search {
+  display: none;
+}
+form .show-bar {
+  display: block;
+}
 
 .card {
   margin: 13px;

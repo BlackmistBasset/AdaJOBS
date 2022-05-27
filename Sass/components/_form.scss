@@ -24,4 +24,12 @@ form {
         margin: 5px;
         width: 80px;
     }
+ 
+    .location-search, .seniority-search, .category-search {
+        display: none;
+    }
+
+    .show-bar {
+        display: block;
+    }
 }
