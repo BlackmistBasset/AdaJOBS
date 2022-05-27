@@ -21,7 +21,14 @@
 
     
     <form id="search-form">
-        <select name="Location">
+        <select name="SearchBy" id="search-by">
+            <option value="SearchBy">Search by..</option>
+            <option value="Location">Location</option>
+            <option value="Seniority">Seniority</option>
+            <option value="Category">Category</option>
+        </select>
+
+        <select name="Location" id="location-search" class="location-search">
             <option value="Location">Location...</option>
             <option value="CABA">CABA</option>
             <option value="GBA Norte">GBA Norte</option>
@@ -29,15 +36,15 @@
             <option value="GBA Sur">GBA Sur</option>
         </select>
         
-        <select name="Seniority">
+        <select name="Seniority" id="seniority-search" class="seniority-search">
             <option value="Seniority">Seniority...</option>
             <option value="Trainee">Trainee</option>
             <option value="Junior">Junior</option>
-            <option value="Semi-Senior">Semi Senior</option>
+            <option value="Semi Senior">Semi Senior</option>
             <option value="Senior">Senior</option>
         </select>
         
-        <select name="Category">
+        <select name="Category" id="category-search" class="category-search">
             <option value="Category">Category...</option>
             <option value="Horse Care">Horse Care</option>
             <option value="Competition">Competition</option>
@@ -45,8 +52,8 @@
             <option value="Breeding">Breeding</option>
         </select>
         
-        <input type="button" value="Search" /> 
-        <input type="button" value="Clear" />
+        <input type="button" value="Search" id="btn-search" /> 
+        <input type="button" value="Clear" id="btn-cancel-search" />
     </form>
     
     <div class="loading-container ">
