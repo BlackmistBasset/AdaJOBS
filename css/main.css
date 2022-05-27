@@ -26,6 +26,7 @@ nav .banner {
 }
 nav h1 {
   font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
 }
 nav h1, nav h3 {
   margin: 15px;
@@ -45,6 +46,7 @@ section .card-container {
 }
 
 footer {
+  display: none;
   position: relative;
   top: 96%;
   left: 0%;
@@ -453,7 +455,7 @@ form .show-bar {
   background-color: #271f30;
   border-radius: 10px;
   width: 400px;
-  height: 200px;
+  height: 250px;
   margin: auto;
   z-index: 1;
   padding: 10px;
