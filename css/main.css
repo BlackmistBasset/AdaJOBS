@@ -15,7 +15,7 @@ body {
 }
 
 nav {
-  height: 60px;
+  height: 3.75em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,20 +29,34 @@ nav h1 {
   cursor: pointer;
 }
 nav h1, nav h3 {
-  margin: 15px;
+  margin: 0.9375rem;
   color: #f7f7ff;
+}
+@media screen and (max-width: 600px) {
+  nav h3 {
+    display: none;
+  }
 }
 
 section {
   width: 85%;
-  margin: 0px auto 50px auto;
+  margin: 0em auto 3.125em auto;
 }
 section .card-container {
-  width: 1100px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: 0px auto;
+  justify-content: center;
+  margin: 0em auto;
+}
+@media screen and (max-width: 1400px) {
+  section {
+    width: 68.75em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  section {
+    width: 90%;
+  }
 }
 
 footer {
@@ -51,7 +65,7 @@ footer {
   top: 96%;
   left: 0%;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
 }
 footer p {
   color: #C11785;
@@ -60,10 +74,10 @@ footer p {
 }
 
 .btn-container button {
-  margin: 15px;
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+  margin: 0.9375em;
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: #271f30;
   color: #C11785;
   font-weight: bold;
@@ -80,60 +94,60 @@ footer p {
 }
 
 .loading-container {
-  width: 70px;
-  margin: 10px auto;
+  width: 4.375em;
+  margin: 0.625em auto;
 }
 .loading-container img {
-  width: 70px;
+  width: 4.375em;
 }
 
 form {
-  margin: 10px auto;
-  width: 80%;
+  margin: 0.625em auto;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 form select {
   width: 25%;
-  height: 30px;
-  margin: 15px 10px;
+  height: 1.875em;
+  margin: 0.9375em 0.625em;
   color: #f7f7ff;
   background-color: #271f30;
-  border-radius: 8px;
+  border-radius: 0.5em;
   border: 2px solid #C11785;
 }
-form input[type=submit] {
-  margin: 5px;
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+form #btn-search {
+  margin: 0.3125em;
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: #C11785;
   color: #271f30;
   font-weight: bold;
   border: none;
-  width: 80px;
+  width: 5em;
 }
-form input[type=submit]:hover {
+form #btn-search:hover {
   cursor: pointer;
   background-color: #f020a7;
   color: #583381;
 }
-form input[type=submit]:active {
+form #btn-search:active {
   background-color: #C11785;
   color: #271f30;
 }
 form input[type=button] {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: #271f30;
   color: #C11785;
   font-weight: bold;
   border: none;
   border: 2px solid #C11785;
-  margin: 5px;
-  width: 80px;
+  margin: 0.3125em;
+  width: 5em;
 }
 form input[type=button]:hover {
   cursor: pointer;
@@ -152,52 +166,63 @@ form .show-bar {
 }
 
 .card {
-  margin: 13px;
-  padding: 10px;
-  padding-right: 20px;
-  width: 340px;
-  height: 235px;
-  border-radius: 10px;
+  margin: 0.8125em;
+  padding: 0.625em;
+  padding-right: 1.25em;
+  width: 21.25em;
+  height: 14.6875em;
+  border-radius: 0.625em;
   border: 2px solid #C11785;
   color: #f7f7ff;
 }
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 90%;
+  }
+}
 .card h2 {
   font-size: 1.2em;
-  margin: 5px 10px;
+  margin: 0.3125rem 0.625rem;
   color: #C11785;
 }
 .card div {
-  height: 90px;
+  height: 5.625em;
   overflow-y: auto;
-  margin-bottom: 14px;
+  margin-bottom: 0.875em;
 }
 .card p {
   font-size: 0.8em;
-  margin: 5px 10px;
+  margin: 0.3125rem 0.625rem;
 }
 .card h3 {
   font-size: 0.8em;
-  margin-top: 17px;
-  margin-left: 5px;
+  margin-top: 1.0625em;
+  margin-left: 0.3125em;
 }
-.card span {
-  padding: 0px 10px;
+.card .tag {
+  display: inline;
+  padding: 0em 0.625em;
   background-color: #271f30;
   color: #C11785;
-  margin: 3px;
+  margin: 0.1375em;
   border: 2px solid #C11785;
-  border-radius: 6px;
+  border-radius: 0.375em;
 }
 .card button {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: #C11785;
   color: #271f30;
   font-weight: bold;
   border: none;
-  margin-top: 15px;
-  margin-left: 210px;
+  margin-top: 0.9375em;
+  margin-left: 13.125rem;
 }
 .card button:hover {
   cursor: pointer;
@@ -208,9 +233,32 @@ form .show-bar {
   background-color: #C11785;
   color: #271f30;
 }
+@media screen and (max-width: 200px) {
+  .card button {
+    margin-top: 1.5em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card button {
+    margin-top: 1.5em;
+    margin-left: 80%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card button {
+    margin-top: 1.5em;
+    margin-left: 75%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .card button {
+    margin-top: 1.5em;
+    margin-left: 60%;
+  }
+}
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0.625em;
 }
 
 ::-webkit-scrollbar-track {
@@ -219,7 +267,7 @@ form .show-bar {
 
 ::-webkit-scrollbar-thumb {
   background: #C11785;
-  border-radius: 5px;
+  border-radius: 0.3125em;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -227,36 +275,52 @@ form .show-bar {
 }
 
 .card-detail {
-  padding: 20px;
-  margin: 0px auto;
+  padding: 1.25em;
+  margin: 2em auto;
   width: 80%;
   border: 2px solid #C11785;
   color: #f7f7ff;
-  border-radius: 10px;
+  border-radius: 0.625em;
 }
 .card-detail .return {
   text-decoration: underline;
-  color: #C11785;
+  color: #f7f7ff;
   cursor: pointer;
   font-size: 0.9em;
-  margin-left: 0px;
-  margin-top: 5px;
+  margin-left: 0em;
+  margin-top: 0.3125em;
+  margin-bottom: 0.5em;
 }
 .card-detail h2 {
   color: #C11785;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375em;
 }
 .card-detail .tags-container h3 {
   display: inline-block;
 }
-.card-detail .tags-container span {
-  padding: 0px 10px;
+.card-detail .tags-container .tag {
+  display: inline-block;
+  padding: 0em 0.625em;
   color: #C11785;
-  margin: 3px;
+  margin: 0.1875em;
   border: 2px solid #C11785;
-  border-radius: 6px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  border-radius: 0.375em;
+  margin-top: 0.7em;
+}
+@media screen and (max-width: 1000px) {
+  .card-detail {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card-detail {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .card-detail {
+    width: 98%;
+  }
 }
 
 .job-horse-container {
@@ -264,16 +328,31 @@ form .show-bar {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 800px) {
+  .job-horse-container {
+    flex-direction: column;
+  }
+  .job-horse-container .horse-details, .job-horse-container .job-details {
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 0em;
+    display: block;
+    height: auto;
+  }
+  .job-horse-container .job-description {
+    margin-bottom: 1em;
+  }
+}
 
 .horse-details {
   width: 35%;
 }
 .horse-details img {
-  width: 220px;
-  border-radius: 10px;
+  width: 13.75em;
+  border-radius: 0.625em;
   border: 2px solid #C11785;
-  padding: 5px;
-  margin-bottom: 20px;
+  padding: 0.3125em;
+  margin-bottom: 1.25em;
 }
 .horse-details h4 {
   color: #C11785;
@@ -281,10 +360,15 @@ form .show-bar {
 .horse-details h4 > p {
   font-weight: lighter;
 }
+@media screen and (max-width: 1000px) {
+  .horse-details {
+    width: 50%;
+  }
+}
 
 .job-details {
   width: 55%;
-  height: 300px;
+  height: 18.75em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -292,26 +376,32 @@ form .show-bar {
 .job-details h4 {
   color: #C11785;
 }
+@media screen and (max-width: 1000px) {
+  .job-details {
+    width: 50%;
+    padding-right: 1em;
+  }
+}
 
 .job-description {
-  margin-bottom: 90px;
+  margin-bottom: 5.625em;
 }
 
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 1.875em;
 }
 .button-container .btn-delete {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: #271f30;
   color: #C11785;
   font-weight: bold;
   border: none;
   border: 2px solid #C11785;
-  margin-right: 20px;
+  margin-right: 1.25em;
 }
 .button-container .btn-delete:hover {
   cursor: pointer;
@@ -323,9 +413,9 @@ form .show-bar {
   color: #C11785;
 }
 .button-container .btn-edit {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: #C11785;
   color: #271f30;
   font-weight: bold;
@@ -345,54 +435,54 @@ form .show-bar {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 45%;
+  width: 60%;
   border: 2px solid #C11785;
-  border-radius: 10px;
+  border-radius: 0.625em;
 }
 .create-job-form label, .edit-job-form label {
   color: #C11785;
-  margin: 10px;
-  margin-left: 20px;
+  margin: 0.625em;
+  margin-left: 1.25em;
 }
 .create-job-form textarea, .create-job-form input[type=text], .create-job-form select, .edit-job-form textarea, .edit-job-form input[type=text], .edit-job-form select {
   width: 85%;
-  margin: 0px auto;
+  margin: 0em auto;
 }
 .create-job-form input[type=text], .edit-job-form input[type=text] {
-  height: 30px;
+  height: 1.875em;
   background-color: #271f30;
   color: #f7f7ff;
   border: 2px solid #C11785;
-  border-radius: 10px;
+  border-radius: 0.625em;
 }
 .create-job-form textarea, .edit-job-form textarea {
   background-color: #271f30;
   color: #f7f7ff;
   border: 2px solid #C11785;
-  border-radius: 10px;
-  height: 100px;
+  border-radius: 0.625em;
+  height: 6.25em;
 }
 .create-job-form h4, .edit-job-form h4 {
   font-size: 1.3em;
   color: #C11785;
-  margin-top: 30px;
-  margin-left: 10px;
+  margin-top: 1.875rem;
+  margin-left: 0.625rem;
 }
 .create-job-form div, .edit-job-form div {
   width: 40%;
   display: flex;
-  margin: 20px auto;
+  margin: 1.25em auto;
 }
 .create-job-form .btn-cancel, .edit-job-form .btn-cancel {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: #271f30;
   color: #C11785;
   font-weight: bold;
   border: none;
   border: 2px solid #C11785;
-  margin-right: 10px;
+  margin-right: 0.625em;
 }
 .create-job-form .btn-cancel:hover, .edit-job-form .btn-cancel:hover {
   cursor: pointer;
@@ -404,14 +494,14 @@ form .show-bar {
   color: #C11785;
 }
 .create-job-form .btn-success, .edit-job-form .btn-success {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: #C11785;
   color: #271f30;
   font-weight: bold;
   border: none;
-  width: 150px;
+  width: 9.375em;
 }
 .create-job-form .btn-success:hover, .edit-job-form .btn-success:hover {
   cursor: pointer;
@@ -422,23 +512,49 @@ form .show-bar {
   background-color: #C11785;
   color: #271f30;
 }
+@media screen and (max-width: 1000px) {
+  .create-job-form, .edit-job-form {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .create-job-form, .edit-job-form {
+    width: 95%;
+  }
+}
 
 .edit-job-form {
   width: 80%;
-  margin-top: 20px;
+  margin-top: 1.25em;
 }
 .edit-job-form div {
   justify-content: center;
 }
 .edit-job-form .btn-success {
-  width: 100px;
+  width: 6.25em;
+}
+@media screen and (max-width: 1000px) {
+  .edit-job-form {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .edit-job-form {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .edit-job-form {
+    width: 98%;
+  }
 }
 
 .delete-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100vw;
@@ -453,21 +569,31 @@ form .show-bar {
   justify-content: space-between;
   border: 2px solid #C11785;
   background-color: #271f30;
-  border-radius: 10px;
-  width: 400px;
-  height: 250px;
+  border-radius: 0.625em;
+  width: 25em;
+  height: 15.625em;
   margin: auto;
   z-index: 1;
-  padding: 10px;
+  padding: 0.625em;
 }
 .delete-warning h3 {
   font-size: 1.3em;
   color: #C11785;
-  margin: 10px;
+  margin: 0.625em;
 }
 .delete-warning p {
   color: #f7f7ff;
-  margin-left: 15px;
+  margin-left: 0.9375em;
+}
+@media screen and (max-width: 800px) {
+  .delete-warning {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .delete-warning {
+    width: 95%;
+  }
 }
 .delete-warning .btn-container {
   display: flex;
@@ -475,15 +601,15 @@ form .show-bar {
   margin: 0px;
 }
 .delete-warning .btn-container .btn-cancel {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: #271f30;
   color: #C11785;
   font-weight: bold;
   border: none;
   border: 2px solid #C11785;
-  margin-right: 10px;
+  margin-right: 0.625em;
 }
 .delete-warning .btn-container .btn-cancel:hover {
   cursor: pointer;
@@ -495,9 +621,9 @@ form .show-bar {
   color: #C11785;
 }
 .delete-warning .btn-container .btn-success {
-  width: 100px;
-  height: 30px;
-  border-radius: 10px;
+  width: 6.25em;
+  height: 1.875em;
+  border-radius: 0.625em;
   background-color: #C11785;
   color: #271f30;
   font-weight: bold;

@@ -1,36 +1,49 @@
 .card-detail {
     .return {
         text-decoration: underline;
-        color: $secondary-color;
+        color: $font-color;
         cursor: pointer;
         font-size: 0.9em;
-        margin-left: 0px;
-        margin-top: 5px;
+        margin-left: 0em;
+        margin-top: 0.3125em;
+        margin-bottom: 0.5em;
     }
-    padding: 20px;
-    margin: 0px auto;
+    padding: 1.25em;
+    margin: 2em auto;
     width: 80%;
     border: 2px solid $secondary-color;
     color: $font-color;
-    border-radius: 10px;
+    border-radius: 0.625em;
         h2 {
             color: $secondary-color;
-            margin-bottom: 15px;
+            margin-bottom: 0.9375em;
         }
 
         .tags-container {
             h3 {
                 display: inline-block;
             }
-            span {
-                padding: 0px 10px;
+            .tag {
+                display: inline-block;
+                padding: 0em 0.625em;
                 color: $secondary-color;
-                margin: 3px;
+                margin: 0.1875em;
                 border: 2px solid $secondary-color;
-                border-radius: 6px;
-                margin-top: 20px;
-                margin-bottom: 10px;
+                border-radius: 0.375em;
+                margin-top: 0.7em;
         }
+    }
+
+    @include set-breakpoints(lg) {
+        width: 90%;
+    }
+
+    @include set-breakpoints(md) {
+        width: 95%;
+    }
+
+    @include set-breakpoints(sm) {
+        width: 98%;
     }
 }
 
@@ -38,16 +51,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    
+    @include set-breakpoints(md) {
+        flex-direction: column;
+
+        .horse-details, .job-details {
+            width: 100%;
+            margin-bottom: 2em;
+            padding: 0em;
+            display: block;
+            height: auto;
+        }
+
+        .job-description {
+            margin-bottom: 1em;
+        }
+     }
 }
 
 .horse-details {
     width: 35%;
     img {
-        width: 220px;
-        border-radius: 10px;
+        width: 13.75em;
+        border-radius: 0.625em;
         border: 2px solid $secondary-color;
-        padding: 5px;
-        margin-bottom: 20px;
+        padding: 0.3125em;
+        margin-bottom: 1.25em;
     }
     h4 {
         color: $secondary-color;
@@ -55,11 +85,15 @@
     h4 > p {
         font-weight: lighter;
     }
+
+    @include set-breakpoints(lg) {
+        width: 50%;
+    }
 }
 
 .job-details {
     width: 55%;
-    height: 300px;
+    height: 18.75em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -67,20 +101,24 @@
         color: $secondary-color;
     }
     
+    @include set-breakpoints(lg) {
+        width: 50%;
+        padding-right: 1em;
+    }
 }
 
 .job-description {
-    margin-bottom: 90px;
+    margin-bottom: 5.625em;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 1.875em;
     .btn-delete {
         @include button-format($main-color, $secondary-color, $main-color-lighter, $secondary-color-lighter );
         border: 2px solid $secondary-color;
-        margin-right: 20px;
+        margin-right: 1.25em;
     }
     .btn-edit {
         @include button-format($secondary-color, $main-color, $secondary-color-lighter, $main-color-lighter );

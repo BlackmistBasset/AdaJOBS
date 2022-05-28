@@ -25,7 +25,7 @@ const renderErrorDetail = (errorDetail) => {
 
 
             <div class="btn-container">
-                <button class="btn-success" id="close-alert">Go to main page</button>
+                <button class="btn-success" id="close-alert">Go Back</button>
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@ const createJobCards = (jobs) => {
                                     <div>
                                         <p>${description}</p>
                                     </div>
-                                <h3> <span>${location}</span> <span>${category}</span> <span>${seniority}</span> </h3>
+                                <h3> <p class="tag">${location}</p> <p class="tag">${category}</p> <p class="tag">${seniority}</p> </h3>
 
                                 <button onClick="seeJobDetails(${id})">See Details</button>
                             </div>
@@ -76,7 +76,7 @@ const createJobCards = (jobs) => {
 
 const seeJobDetails = (jobId) => {
     showFooter.style.display = 'none'
-    fetch(`https://6277e34508221c96846a7195.mockapi.io/jobs/${jobId}`)
+    fetch(`https://6277e34508221c96846a7195.mockapi.io/jobs/${jobId}sdsda`)
         .then(res => res.json())
         .then(data => createCardDetail(data))
         .catch(err => renderErrorDetail(err))
@@ -84,6 +84,8 @@ const seeJobDetails = (jobId) => {
 }
     
 const createCardDetail = (cardDetail) => {
+    searchForm.style.display = 'none'
+
     const { name, location, category, seniority, description, horse } = cardDetail
     const { horseName, horseImg, horseDetail } = horse
 
@@ -108,7 +110,7 @@ const createCardDetail = (cardDetail) => {
         cardContainer.innerHTML = `
                     <div class="card-detail">
 
-                        <p class="return" onClick="getHorseJobs()">Go back</p> 
+                        <p class="return" onClick="getHorseJobs()"> <<< Go back</p> 
 
                         <div class="job-horse-container">
 
@@ -121,9 +123,9 @@ const createCardDetail = (cardDetail) => {
 
                                 <div class="tags-container">
                                     <h3>Tags: </h3> 
-                                    <span>${location}</span> 
-                                    <span>${category}</span> 
-                                    <span>${seniority}</span>
+                                    <div class="tag">${location}</div>
+                                    <div class="tag">${category}</div>
+                                    <div class="tag">${seniority}</div>
                                 </div>
 
                             </div>

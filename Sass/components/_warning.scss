@@ -1,8 +1,9 @@
 .delete-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     width: 100vw;
@@ -17,22 +18,30 @@
     justify-content: space-between;
     border: 2px solid $secondary-color;
     background-color: $main-color;
-    border-radius: 10px;
-    width: 400px;
-    height: 250px;
+    border-radius: 0.625em;
+    width: 25em;
+    height: 15.625em;
     margin: auto;
     z-index: 1;
-    padding: 10px;
+    padding: 0.625em;
 
     h3 {
         font-size: 1.3em;
         color: $secondary-color;
-        margin: 10px;
+        margin: 0.625em;
     }
 
     p {
         color: $font-color;
-        margin-left: 15px;
+        margin-left: 0.9375em;
+    }
+
+    @include set-breakpoints(md) {
+        width: 90%;
+    }
+
+    @include set-breakpoints(sm) {
+        width: 95%;
     }
 
     .btn-container {
@@ -42,13 +51,11 @@
         .btn-cancel {
             @include button-format ($main-color, $secondary-color, $main-color-lighter, $secondary-color-lighter);
             border: 2px solid $secondary-color;
-            margin-right: 10px; 
+            margin-right: 0.625em; 
         }
         
         .btn-success {
             @include button-format ($secondary-color, $main-color, $secondary-color-lighter, $main-color-lighter);
         }
-
     }
-
 }
