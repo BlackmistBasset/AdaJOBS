@@ -76,7 +76,7 @@ const createJobCards = (jobs) => {
 
 const seeJobDetails = (jobId) => {
     showFooter.style.display = 'none'
-    fetch(`https://6277e34508221c96846a7195.mockapi.io/jobs/${jobId}sdsda`)
+    fetch(`https://6277e34508221c96846a7195.mockapi.io/jobs/${jobId}`)
         .then(res => res.json())
         .then(data => createCardDetail(data))
         .catch(err => renderErrorDetail(err))
