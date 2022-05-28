@@ -2,72 +2,92 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 45%;
+    width: 60%;
     border: 2px solid $secondary-color;
-    border-radius: 10px;
+    border-radius: 0.625em;
 
     label {
         color: $secondary-color;
-        margin: 10px;
-        margin-left: 20px;
+        margin: 0.625em;
+        margin-left: 1.25em;
     }
 
     textarea, input[type=text], select {
         width: 85%;
-        margin: 0px auto;
+        margin: 0em auto;
 
     }
 
     input[type=text] {
-        height: 30px;
+        height: 1.875em;
         background-color: $main-color;
         color: $font-color;
         border: 2px solid $secondary-color;
-        border-radius: 10px;
+        border-radius: 0.625em;
     }
 
     textarea {
         background-color: $main-color;
         color: $font-color;
         border: 2px solid $secondary-color;
-        border-radius: 10px;
-        height: 100px;
+        border-radius: 0.625em;
+        height: 6.25em;
     }
 
     h4 {
         font-size: 1.3em;
         color: $secondary-color;
-        margin-top: 30px;
-        margin-left: 10px;
+        margin-top: 1.875rem;
+        margin-left: 0.625rem;
     }
 
     div {
         width: 40%;
         display: flex;
-        margin: 20px auto;
+        margin: 1.25em auto;
     }
 
     .btn-cancel {
         @include button-format ($main-color, $secondary-color, $main-color-lighter, $secondary-color-lighter);
         border: 2px solid $secondary-color;
-        margin-right: 10px; 
+        margin-right: 0.625em;
     }
     
     .btn-success {
         @include button-format ($secondary-color, $main-color, $secondary-color-lighter, $main-color-lighter);
-        width: 150px;
+        width: 9.375em;
+    }
+
+    @include set-breakpoints(lg) {
+        width: 90%;
+    }
+
+    @include set-breakpoints(md) {
+        width: 95%;
     }
 }
 
 .edit-job-form {
     width: 80%;
-    margin-top: 20px;
+    margin-top: 1.25em;
 
     div {
         justify-content: center;
     }
     
     .btn-success {
-        width: 100px;
+        width: 6.25em;
+    }
+
+    @include set-breakpoints(lg) {
+        width: 90%;
+    }
+
+    @include set-breakpoints(md) {
+        width: 95%;
+    }
+
+    @include set-breakpoints(sm) {
+        width: 98%;
     }
 }

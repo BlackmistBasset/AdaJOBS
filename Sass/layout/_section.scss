@@ -1,11 +1,18 @@
 section {
     width: 85%;
-    margin: 0px auto 50px auto;
+    margin: 0em auto 3.125em auto;
     .card-container {
-        width: 1100px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
-        margin: 0px auto;
+        justify-content: center;
+        margin: 0em auto;
+    }
+
+    @include set-breakpoints(xxl) {
+        width: 68.75em;
+    }
+
+    @include set-breakpoints(xl) {
+        width: 90%;
     }
 }

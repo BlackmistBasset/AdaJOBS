@@ -1,7 +1,7 @@
 .btn-container {
         
     button {
-        margin: 15px;
+        margin: 0.9375em;
         @include button-format ($main-color, $secondary-color, $main-color-lighter, $secondary-color-lighter)
     }
 }
