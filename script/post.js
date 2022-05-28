@@ -50,11 +50,20 @@ const createNewJob = () => {
                 </div>
             </form>
             `
+    const jobName = document.getElementById('job-name')
+    const jobDescription = document.getElementById('job-description')
+    const jobLocation = document.getElementById('job-location')
+    const jobCategory = document.getElementById('job-category')
+    const jobSeniority =  document.getElementById('job-seniority')
+
+    const horseName = document.getElementById('horse-name')
+    const horseImg = document.getElementById('horse-img')
+    const horseDetail = document.getElementById('horse-detail')
 
     const submitJob = document.getElementById('submit-job')
     submitJob.addEventListener('click', (e) => {
         e.preventDefault()
-        submitNewJob()
+        validateNewJobForm()
     })
 }
 
@@ -90,3 +99,38 @@ const submitNewJob = () => {
             .catch(err => console.log(err))
         }
         
+const validateNewJobForm = () => {
+
+    const jobName = document.getElementById('job-name')
+    const jobDescription = document.getElementById('job-description')
+    const jobLocation = document.getElementById('job-location')
+    const jobCategory = document.getElementById('job-category')
+    const jobSeniority =  document.getElementById('job-seniority')
+
+    const horseName = document.getElementById('horse-name')
+    const horseImg = document.getElementById('horse-img')
+    const horseDetail = document.getElementById('horse-detail')
+
+    if (jobName.value === '' || jobDescription.value === '' || jobCategory.value === 'Category' || jobSeniority.value === 'Seniority' || jobLocation.value === 'Location' || horseName.value === '' || horseImg.value === '' || horseDetail.value === '') {
+        errorContainer.innerHTML = `
+        <div class="delete-container" id="delete-container">
+        <div class="delete-warning"> 
+            <h3>Error</h3>
+            <p>Please fill every field! </p>
+
+            <div class="btn-container">
+                <button class="btn-success" id="close-alert">Close</button>
+            </div>
+        </div>
+    </div>`
+    } else {
+        submitNewJob()
+    }
+
+    const closeAlert = document.getElementById('close-alert')
+    const modalContainer = document.getElementById('delete-container')
+
+    closeAlert.addEventListener('click', () => {
+        modalContainer.style.display = 'none'
+    })
+}
